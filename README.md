@@ -10,45 +10,37 @@ Ejercicios de procesamiento de imágenes en C++ usando OpenCV, desarrollados en 
 
 ---
 
-## 📁 Estructura
-```
-├── ejercicio1.cpp   # Dilatación morfológica
-├── ejercicio2.cpp   # Erosión morfológica
-├── ejercicio3.cpp   # Relleno de huecos (FloodFill + Bitwise)
-├── ejercicio4.cpp   # Eliminación de ruido (FindContours)
-├── ejercicio5.cpp   # Separación de canales RGB
-├── ejercicio6.cpp   # Eliminación de ruido (MedianBlur)
-├── ejercicio7.cpp   # Resaltar color en HSV
-└── TallerVision.pro # Proyecto Qt Creator
-```
-
----
-
 ## 📌 Descripción de ejercicios
 
 ### Ejercicio 1 - Dilatación
 Engrosa el texto blanco sobre fondo negro.  
-**Operación:** `threshold` + `dilate`
+**Operación:** `threshold` + `dilate`  
+**Imagen entrada:** `../Data/tutor.png`
 
 ### Ejercicio 2 - Erosión
 Adelgaza el texto blanco sobre fondo negro.  
-**Operación:** `threshold` + `erode`
+**Operación:** `threshold` + `erode`  
+**Imagen entrada:** `../Data/tutor.png`
 
 ### Ejercicio 3 - Relleno de huecos
 Rellena los huecos negros dentro del pájaro blanco.  
-**Operación:** `bitwise_not` + `floodFill` + `bitwise_or`
+**Operación:** `findContours` + `drawContours(FILLED)` con el contorno de mayor área  
+**Imagen entrada:** `../Data/ave2.png`
 
 ### Ejercicio 4 - Eliminar ruido externo
 Elimina fragmentos blancos pequeños fuera del pájaro.  
-**Operación:** `findContours` + `drawContours(FILLED)` con el contorno de mayor área
+**Operación:** `findContours` + `drawContours(FILLED)` con el contorno de mayor área  
+**Imagen entrada:** `../Data/ave.jpg`
 
 ### Ejercicio 5 - Separación de canales
 Genera 3 imágenes independientes, una por cada canal R, G y B.  
-**Operación:** `split` + `merge`
+**Operación:** `split` + `merge`  
+**Imagen entrada:** `../Data/imagenBGR.png`
 
 ### Ejercicio 6 - Eliminar ruido sal y pimienta
 Suaviza la imagen Lena eliminando el ruido sin perder nitidez.  
-**Operación:** `medianBlur`
+**Operación:** `medianBlur`  
+**Imagen entrada:** `../Data/lenanoise.png`
 
 ### Ejercicio 7 - Resaltar color en HSV
 Resalta un color específico dejando el resto en escala de grises.  
